@@ -8,3 +8,4 @@ Additionally, to use shadow symbolic execution for check test generation, use `c
 
 ## TODO
 - Add case where we have timeout and segmentation fault (for muteria testing purposes)
+- Add a case where the program return a non 0 exit code (for chcking KLEE-REPLAY driver)
