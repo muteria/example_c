@@ -5,3 +5,6 @@ Example for Muteria
 - `muteria --config ctrl/conf.py --lang c run`
 
 Additionally, to use shadow symbolic execution for check test generation, use `conf_shadow.py`
+
+## TODO
+- Add case where we have timeout and segmentation fault (for muteria testing purposes)
