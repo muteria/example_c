@@ -9,21 +9,21 @@ from muteria.drivers.testgeneration.tools_by_languages.c.semu.driver_config \
                                              import MetaMuSource, DriverConfigSemu
 distance = 10
 pre_flags = [
-                                #('-semu-disable-statediff-in-testgen',),
-                                #('-semu-continue-mindist-out-heuristic',),
+                                ('-semu-checkpoint-window', str(distance)),
+                                ('-semu-minimum-propagation-depth', '0'),
+                                ('-semu-propagation-proportion', '0.0'),
+                                ('-semu-precondition-length', '-2'), # start from top
+                                #('-semu-max-total-tests-gen', '1000')
+                                ('-semu-number-of-tests-per-mutant', '500000'),
+                                ('-solver-backend', 'z3'),
+                                ('-max-memory', '150000'),
+                                
+                                #('-semu-no-state-difference',),
+                                #('-semu-MDO-propagation-selection-strategy',),
                                 #('-semu-use-basicblock-for-distance',),
                                 ('-semu-forkprocessfor-segv-externalcalls',),
                                 #('-semu-testsgen-only-for-critical-diffs',),
-                                ('-semu-consider-outenv-for-diffs',),
-
-                                ('-semu-mutant-max-fork', str(distance)),
-                                ('-semu-checknum-before-testgen-for-discarded', '0'),
-                                ('-semu-mutant-state-continue-proba', '0.0'),
-                                ('-semu-precondition-length', '-2'), # start from top
-                                #('-semu-max-total-tests-gen', '1000')
-                                ('-semu-max-tests-gen-per-mutant', '500000'),
-                                ('-solver-backend', 'z3'),
-                                ('-max-memory', '150000'),
+                                #('-semu-no-environment-output-diff',),
 
                                 #('-seed-out-dir', "/work_data/cr-22/ktests_seeds"),
                             ]
