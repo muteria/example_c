@@ -29,6 +29,7 @@ shadow_se_test = TestcaseToolsConfig(tooltype=TestToolType.USE_CODE_AND_TESTS, t
                             PATH_TO_TOOL_BINARY_DIR='/home/shadowvm/shadow/klee-change/Release+Asserts/bin/'
                         ))
 shadow_se_test.set_one_test_execution_timeout(2)
+#shadow_se_test.set_compress_test_storage_dir(False)
 
 # test tool list
 TESTCASE_TOOLS_CONFIGS = [
